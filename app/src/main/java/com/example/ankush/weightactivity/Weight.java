@@ -32,11 +32,10 @@ public class Weight extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String w = etWeight.getText().toString();
-                Double wt = Double.parseDouble(w);
-                Intent j = new Intent(Weight.this,Result.class);
-                j.putExtra("w",wt);
-                j.putExtra("p",n);
-                startActivity(j);
+                Intent i = new Intent(Weight.this,Result.class);
+                i.putExtra("w",w);
+                i.putExtra("p",n);
+                startActivity(i);
             }
         });
 

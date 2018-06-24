@@ -20,18 +20,19 @@ public class Result extends AppCompatActivity {
         tvResult = (TextView)findViewById(R.id.tvResult);
         btnLogout = (Button)findViewById(R.id.btnLogout);
 
-        Intent j = getIntent();
-        final String n = j.getStringExtra("p");
-        final String w = j.getStringExtra("w");
-        Double wt = Double.parseDouble(w);
+        Intent i = getIntent();
+        final String n = i.getStringExtra("p");
+        final String w = i.getStringExtra("w");
+        //Double wt = Double.parseDouble(w);
 
-        tvResult.append(n + ". You weight is "+wt+" fucking kgs. Nigga, you're fat af");
+        tvResult.append(n + ". You weight is "+w+" fucking kgs. Nigga, you're fat af");
 
         btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(Result.this,MainActivity.class);
                 startActivity(i);
+                finish();
 
             }
         });
